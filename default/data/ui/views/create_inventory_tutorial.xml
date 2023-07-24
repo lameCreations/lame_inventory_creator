@@ -1,0 +1,85 @@
+<dashboard version="1.1" theme="light">
+  <label>Create Inventory Tutorial</label>
+  <description>Describes the general frame work for letting Splunk look at your logs to create its own inventory</description>
+  <row>
+    <panel>
+      <html>
+        <h1 align="center">If you don't have the Splunk CIM Data Model App installed, click <b>
+            <a href="https://splunkbase.splunk.com/app/1621">HERE</a>
+          </b> to go to the link for the app</h1>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+      <h1 align="center">Validate or Change Eventtype for Network Traffic Indexes</h1>
+    </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>| rest servicesNS/-/-/saved/eventtypes
+| search id = "*nt_index"
+| table title, search
+| rename title as "Eventtype Title"
+| rename search as Value</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">cell</option>
+        <option name="refresh.display">progressbar</option>
+        <drilldown>
+          <link target="_blank">/manager/lame_inventory_creator/saved/eventtypes/nt_index?action=edit&amp;ns=lame_inventory_creator&amp;f_ns=Splunk_SA_CIM&amp;f_pwnr=-&amp;f_search=nt_index&amp;f_count=25&amp;uri=/servicesNS/nobody/lame_inventory_creator/saved/eventtypes/nt_index</link>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+      <h1 align="center">Validate or Change Eventtype for Network Traffic Sourcetypes</h1>
+    </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>| rest servicesNS/-/-/saved/eventtypes
+| search id = "*nt_sourcetypes"
+| table title, search
+| rename title as "Eventtype Title"
+| rename search as Value</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">cell</option>
+        <drilldown>
+          <link target="_blank">/manager/Splunk_SA_CIM/saved/eventtypes/nt_sourcetypes?action=edit&amp;ns=lame_inventory_creator&amp;uri=%2FservicesNS%2Fnobody%2Flame_inventory_creator%2Fsaved%2Feventtypes%2Fnt_sourcetypes</link>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <h1 align="center">Check if your eventgen data or real data is now part of the Network Traffic Data Model</h1>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>| tstats values(sourcetype) as sourcetype from datamodel=Network_Traffic groupby All_Traffic.src_ip, All_Traffic.dest_ip | head 5</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

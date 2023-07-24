@@ -1,0 +1,140 @@
+[app/ui]
+version = 9.1.0.1
+modtime = 1689610385.362869000
+
+[app/launcher]
+version = 9.1.0.1
+modtime = 1689610385.364242000
+
+[eventtypes/nt_index]
+access = read : [ * ], write : [ * ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689610789.080050000
+
+[eventtypes/nt_sourcetypes]
+access = read : [ * ], write : [ * ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689610800.071029000
+
+[tags/eventtype%3Dnt_sourcetypes]
+access = read : [ * ], write : [ * ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689610800.077958000
+
+[views/create_inventory_tutorial]
+owner = admin
+version = 9.1.0.1
+modtime = 1689683739.297204000
+
+[savedsearches/Create%20Summary%20Network%20Traffic]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 9.1.0.1
+modtime = 1689684890.622143000
+
+[lookups/network_subnet_breakdown.csv]
+owner = admin
+version = 9.1.0.1
+modtime = 1689685401.934868000
+
+[transforms/network_subnet_breakdown]
+access = read : [ * ], write : [ * ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689685529.353401000
+
+[eventtypes/w_index]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689702202.469379000
+
+[eventtypes/w_sourcetypes]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689702230.025383000
+
+[tags/eventtype%3Dw_sourcetypes]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689702230.028265000
+
+[savedsearches/isHTTP_Lookup_Creator]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 9.1.0.1
+modtime = 1689702682.663066000
+
+[eventtypes/auth_index]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689703693.406606000
+
+[eventtypes/auth_sourcetypes]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689703836.988538000
+
+[tags/eventtype%3Dauth_sourcetypes]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 9.1.0.1
+modtime = 1689703836.995577000
+
+[savedsearches/isKerberos_Lookup_Creator]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 9.1.0.1
+modtime = 1689704404.000655000
+
+[savedsearches/isRDP_Lookup_Creator]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 9.1.0.1
+modtime = 1689704666.215071000
+
+[savedsearches/isDNS_Lookup_Creator]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 9.1.0.1
+modtime = 1689717575.630236000
+
+[savedsearches/inventory_lookup_creator]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 9.1.0.1
+modtime = 1689719092.975097000
+
+[savedsearches/Create%20ES%20Data%20for%20Alert%20Test]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 9.1.0.1
+modtime = 1689782253.144531000
+
+[app/install/install_source_checksum]
+version = 9.1.0.1
+modtime = 1690155948.084415000
